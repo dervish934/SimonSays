@@ -13,7 +13,9 @@ public class SimonManager : MonoBehaviour
     public bool ListaLlena;
     public bool turnoPc;
     public bool turnoPlayer;
-    
+    public bool gameoverButton;
+    public GameObject restartText;
+
 
     public int Contador;
     public int ContadorUsuario;
@@ -21,6 +23,7 @@ public class SimonManager : MonoBehaviour
 
     [Range(0.1f, 2f)]
     public float Velocidad;
+    public AudioSource gameover;
 
     //public Slider sliderVel;
     //public Text SliderText;
@@ -95,8 +98,11 @@ public class SimonManager : MonoBehaviour
     {
         if (idButton != ListaAleatoria[ContadorUsuario])
         {
+            restartText.SetActive(true);
+            gameover.Play();
             print("Game Over");
             GameOver();
+            gameoverButton = true;
             return;
 
         }
@@ -123,13 +129,20 @@ public class SimonManager : MonoBehaviour
 
     public void Reiniciar()
     {
-        Contador = 0;
-        ContadorUsuario = 0;
-        NivelActual = 0;
-        ListaAleatoria.Clear();
-        LlenarListaAleatoria();
-        turnoPc = true;
-        Invoke("TurnoPC", 1f);
+
+        if (gameoverButton)
+        {
+            Contador = 0;
+            restartText.SetActive(false);
+            ContadorUsuario = 0;
+            NivelActual = 0;
+            ListaAleatoria.Clear();
+            LlenarListaAleatoria();
+            turnoPc = true;
+            Invoke("TurnoPC", 1f);
+            gameoverButton = false;
+        }
+      
 
     }
 

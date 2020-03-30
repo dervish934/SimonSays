@@ -10,8 +10,9 @@ public class FeedbackControl : MonoBehaviour
     public Light Llum;
     public bool Desactivate;
     public bool desactivating;
-    public AudioClip buttonclick;
+   // public AudioClip buttonclick;
     public SimonManager controlador;
+    public AudioSource playNote;
 
     /*Color baseColor;
     Renderer renderer_;
@@ -42,8 +43,9 @@ public class FeedbackControl : MonoBehaviour
             controlador.ClickUsuario(idButton);
 
         }
-        
-        AudioSource.PlayClipAtPoint(buttonclick, Vector3.zero, 1.0f);
+
+        // AudioSource.PlayClipAtPoint(buttonclick, Vector3.zero, 1.0f);
+        playNote.Play();
 
         Invoke("desactivarCubo", 0.1f);
 
