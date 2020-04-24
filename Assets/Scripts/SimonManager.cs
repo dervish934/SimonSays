@@ -34,12 +34,13 @@ public class SimonManager : MonoBehaviour
     // Start is called before the first frame update
 
 
+ 
+
+
     private void Start()
     {
-
-        LlenarListaAleatoria();
-        turnoPc = true;
-        Invoke("TurnoPC", 0.5f);
+        StartCoroutine(WaitFirstGame());
+       
 
     }
     void LlenarListaAleatoria()
@@ -152,6 +153,16 @@ public class SimonManager : MonoBehaviour
 
             Reiniciar();
         }
+    }
+
+
+    private IEnumerator WaitFirstGame()
+    {
+
+        yield return new WaitForSeconds(3);
+        LlenarListaAleatoria();
+        turnoPc = true;
+        Invoke("TurnoPC", 0.5f);
     }
 
 

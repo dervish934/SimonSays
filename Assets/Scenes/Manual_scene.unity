@@ -364,6 +364,14 @@ MonoBehaviour:
   shot1: {fileID: 8300000, guid: 62e36b7eeabf4ec45b2a05090d7c4b46, type: 3}
   shot2: {fileID: 8300000, guid: 25aed96f7a02d484c93c754895a4989b, type: 3}
   shot3: {fileID: 8300000, guid: 89e6c558b17847a4994d6b8fab2e9b82, type: 3}
+  tutorial1: {fileID: 8300000, guid: 094ade8e50b4bd34ea62d27cca2c5a84, type: 3}
+  tutorial2: {fileID: 8300000, guid: d18daec0d05c0af43b1389247d5c7449, type: 3}
+  tutorial3: {fileID: 8300000, guid: a261c398191a8d944827721d1b6d6a3c, type: 3}
+  tutorial4: {fileID: 8300000, guid: 016fa5a953587c040ac687ec0085ebfa, type: 3}
+  tutorial5: {fileID: 8300000, guid: 95bcb28e8e0b9ad4a83a539834a7d094, type: 3}
+  tutorial6: {fileID: 8300000, guid: 40f87adf0f82b9945a8f48cb55d7c502, type: 3}
+  tutorial7: {fileID: 8300000, guid: f1ab2ba81220eb947af294213b1851bd, type: 3}
+  tutorial8: {fileID: 8300000, guid: e8ba24fe6b9f57c4e8e2287b06ae794a, type: 3}
 --- !u!65 &1704161783
 BoxCollider:
   m_ObjectHideFlags: 0
